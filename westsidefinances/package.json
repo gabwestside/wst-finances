@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.1",
     "components": "^0.1.0",
+    "miragejs": "^0.1.41",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.3",
     "react-scripts": "4.0.3",
     "styled": "^1.0.0",
     "styled-components": "^5.3.1",

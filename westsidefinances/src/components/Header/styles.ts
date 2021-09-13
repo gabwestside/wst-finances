@@ -13,6 +13,13 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    .icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        background: #6933ff;
+        border-radius: 50%;
+    }
+
     button {
         font-size: 1rem;
         color: #FFF;

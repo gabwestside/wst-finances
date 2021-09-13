@@ -1,4 +1,4 @@
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/planet.svg'
 
 import { Container, Content } from './styles'
 
@@ -10,7 +10,7 @@ export function Header({ onOpenNewTransactionNewModal }: HeaderProps) {
     return (
         <Container>
             <Content>
-                <img src={Logo} alt="wstfncs" />
+                <img className="icon" src={Logo} alt="wstfncs" />
                 <button type="button" onClick={onOpenNewTransactionNewModal}>
                     Nova transação
                 </button>

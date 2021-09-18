@@ -1,15 +1,17 @@
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
-import { GlobalStyle } from "./styles/global";
 import Modal from 'react-modal';
 import { useState } from "react";
 import { NewTransactionModal } from "./components/NewTransactionModal";
+import { TransactionsProvider } from "./TransactionsContext";
+
+import { GlobalStyle } from "./styles/global";
 
 Modal.setAppElement('#root');
 
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
-
+  
   //Sempre que uma função começa com handle, sabemos que o usuario irá clicar em algo!
   function handleOpenNewTransactionModal() {
       setIsNewTransactionModalOpen(true);
@@ -20,7 +22,7 @@ export function App() {
   }
 
   return (
-    <>
+    <TransactionsProvider>
       <Header onOpenNewTransactionNewModal={handleOpenNewTransactionModal} />
 
       <Dashboard />
@@ -31,6 +33,6 @@ export function App() {
       />
 
       <GlobalStyle />
-    </>
+    </TransactionsProvider>
   );
 }

@@ -1,24 +1,25 @@
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import { useState } from "react";
 import { NewTransactionModal } from "./components/NewTransactionModal";
-import { TransactionsProvider } from "./TransactionsContext";
+import { TransactionsProvider } from "./hooks/useTransactions";
 
 import { GlobalStyle } from "./styles/global";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 export function App() {
-  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
-  
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =
+    useState(false);
+
   //Sempre que uma função começa com handle, sabemos que o usuario irá clicar em algo!
   function handleOpenNewTransactionModal() {
-      setIsNewTransactionModalOpen(true);
+    setIsNewTransactionModalOpen(true);
   }
 
   function handleCloseNewTransactionModal() {
-      setIsNewTransactionModalOpen(false);
+    setIsNewTransactionModalOpen(false);
   }
 
   return (
@@ -28,7 +29,7 @@ export function App() {
       <Dashboard />
 
       <NewTransactionModal
-        isOpen={ isNewTransactionModalOpen}
+        isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
       />
 

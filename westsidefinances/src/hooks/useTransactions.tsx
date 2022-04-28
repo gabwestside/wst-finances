@@ -4,8 +4,8 @@ import {
   useContext,
   useEffect,
   useState,
-} from "react";
-import { api } from "../services/api";
+} from 'react';
+import { api } from '../services/api';
 
 interface Transaction {
   id: number;
@@ -23,7 +23,7 @@ interface Transaction {
 //     category: string;
 // }
 
-type TransactionInput = Omit<Transaction, "id" | "createAt">;
+type TransactionInput = Omit<Transaction, 'id' | 'createAt'>;
 
 // type TransactionInput = Pick<Transaction, 'title' | 'amount' | 'type' | 'category'>;
 
@@ -45,12 +45,12 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
 
   useEffect(() => {
     api
-      .get("transactions")
+      .get('transactions')
       .then((response) => setTransactions(response.data.transactions));
   }, []);
 
   async function createTransaction(transactionInput: TransactionInput) {
-    const response = await api.post("/transactions", {
+    const response = await api.post('/transactions', {
       ...transactionInput,
       createdAt: new Date(),
     });

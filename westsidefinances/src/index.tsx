@@ -27,14 +27,14 @@ createServer({
           amount: 1100,
           createAt: new Date("2021-02-14 11:00:00"),
         },
-        // {
-        //   id: 3,
-        //   title: "Compras do mês",
-        //   type: "withdraw",
-        //   category: "Compras",
-        //   amount: 500,
-        //   creatAt: new Date("2021-02-15 15:13:40"),
-        // },
+        {
+          id: 3,
+          title: "Compras do mês",
+          type: "withdraw",
+          category: "Compras",
+          amount: 500,
+          creatAt: new Date("2021-02-15 15:13:40"),
+        },
         // {
         //   id: 4,
         //   title: "Estagio Front-end",
@@ -50,20 +50,20 @@ createServer({
   routes() {
     this.namespace = "api";
 
-    this.get("/transactions", () => {
-      return this.schema.all("transaction");
+    this.get('/transactions', () => {
+      return this.schema.all('transaction')
     });
 
-    this.post('/transactions', (schema, request) => {
-      const data = JSON.parse(request.requestBody)
+    // this.post('/transactions', (schema, request) => {
+    //   const data = JSON.parse(request.requestBody)
 
-      return schema.create('transation', data)
-    })
+    //   return schema.create("transation", data)
+    // });
 
     this.post("/transactions", (schema, request) => {
-      const data = JSON.parse(request.requestBody);
+      const data = JSON.parse(request.requestBody)
 
-      return this.schema.create("transaction", data);
+      return this.schema.create("transaction", data)
     });
   },
 });

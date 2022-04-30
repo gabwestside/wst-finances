@@ -24,6 +24,7 @@ export const Container = styled.form`
       color: var(--text-body);
     }
 
+    // Para todo input depois do primeiro, acrescentar um margin-top de 1rem
     & + input {
       margin-top: 1rem;
     }
@@ -62,7 +63,7 @@ interface RadioBoxProps {
 
 const colors = {
   green: '#33CC95',
-  red: '#E52E4D',
+  red: '#E52E4D'
 };
 
 export const RadioBox = styled.button<RadioBoxProps>`

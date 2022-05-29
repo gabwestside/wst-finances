@@ -27,14 +27,14 @@ createServer({
           amount: 1100,
           createAt: new Date("2021-02-14 11:00:00"),
         },
-        {
-          id: 3,
-          title: "Compras do mês",
-          type: "withdraw",
-          category: "Compras",
-          amount: 500,
-          creatAt: new Date("2021-02-15 15:13:40"),
-        },
+        // {
+        //   id: 3,
+        //   title: "Compras do mês",
+        //   type: "withdraw",
+        //   category: "Compras",
+        //   amount: 500,
+        //   creatAt: new Date("2021-02-15 15:13:40"),
+        // },
         // {
         //   id: 4,
         //   title: "Estagio Front-end",

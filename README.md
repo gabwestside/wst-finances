@@ -3,6 +3,8 @@ serviço de finanças online
 
 Para iniciá-lo, siga os passos abaixo:
 ```bash
+# Clonar o repositorio
+$ git clone https://github.com/gabwestside/WestsideFinances.git
 # Instalar as dependências
 $ yarn
 # Iniciar o projeto

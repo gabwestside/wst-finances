@@ -1,5 +1,5 @@
 ## Online cash bank with reactJS
-serviço de finanças online
+Serviço de finanças online feito com React Native.
 
 Para iniciá-lo, siga os passos abaixo:
 ```bash
